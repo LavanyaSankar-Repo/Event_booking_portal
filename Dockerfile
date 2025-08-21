@@ -1,7 +1,4 @@
-FROM node:20-alpine
-WORKDIR /app
-COPY package*.json ./
-RUN npm ci --only=production
-COPY server.js ./
-EXPOSE 3000
-CMD ["npm","start"]
+FROM nginx:1.27-alpine
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY index.html styles.css app.js /usr/share/nginx/html/
+EXPOSE 80
