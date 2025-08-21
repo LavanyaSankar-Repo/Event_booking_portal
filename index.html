@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Booking Portal</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Event Booking Portal</h1>
+  </header>
+
+  <main>
+    <section class="events">
+      <h2>Upcoming Events</h2>
+      <div id="events-list" class="card-list"></div>
+    </section>
+
+    <section class="booking">
+      <h2>Book a Ticket</h2>
+      <form id="booking-form">
+        <label>
+          Event ID
+          <input type="text" id="eventId" required />
+        </label>
+        <label>
+          Your Name
+          <input type="text" id="name" required />
+        </label>
+        <label>
+          Email
+          <input type="email" id="email" required />
+        </label>
+        <button type="submit">Book</button>
+      </form>
+      <p id="status"></p>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
